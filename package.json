@@ -1,0 +1,32 @@
+{
+  "name": "nextjs-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/balloonspace/balloonspace-client.git",
+  "author": "Dotsung <dotsung22@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_PATH=src next ./src",
+    "build": "NODE_PATH=src next build ./src",
+    "export": "NODE_PATH=src next export ./src",
+    "start": "NODE_PATH=src next start ./src",
+    "deploy": "aws s3 sync src/out s3://balloonspace"
+  },
+  "dependencies": {
+    "@types/next": "^8.0.6",
+    "@types/styled-components": "^4.1.19",
+    "@zeit/next-typescript": "^1.1.1",
+    "axios": "^0.19.0",
+    "next": "^9.0.5",
+    "open-color": "^1.7.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.36",
+    "babel-plugin-styled-components": "^1.10.6",
+    "typescript": "^3.9.5"
+  }
+}
