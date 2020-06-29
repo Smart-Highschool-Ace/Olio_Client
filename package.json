@@ -1,9 +1,9 @@
 {
-  "name": "nextjs-app",
+  "name": "Olio_Client",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/balloonspace/balloonspace-client.git",
-  "author": "Dotsung <dotsung22@gmail.com>",
+  "repository": "https://github.com/softwareProjectClub-Sha/Olio_Client.git",
+  "author": "GwonHeeJun <developer_gwon@naver.com>",
   "license": "MIT",
   "scripts": {
     "dev": "NODE_PATH=src next ./src",
