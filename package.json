@@ -9,8 +9,7 @@
     "dev": "NODE_PATH=src next ./src",
     "build": "NODE_PATH=src next build ./src",
     "export": "NODE_PATH=src next export ./src",
-    "start": "NODE_PATH=src next start ./src",
-    "deploy": "aws s3 sync src/out s3://balloonspace"
+    "start": "NODE_PATH=src next start ./src"
   },
   "dependencies": {
     "@types/next": "^8.0.6",
