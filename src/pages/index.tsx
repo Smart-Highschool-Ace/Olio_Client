@@ -1,5 +1,5 @@
 const Index: React.FC = () => {
-  return <>main</>;
+  return <>start page</>;
 };
 
 
