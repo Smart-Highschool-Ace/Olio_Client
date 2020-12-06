@@ -1,21 +1,28 @@
-import { People, Views } from 'Assets/Svg';
-import React from 'react';
-import * as S from './Style';
+import People from "assets/svg/People.svg";
+import Views from "assets/svg/Views.svg";
 
-const BoardItem: React.FC = () => {
-    return (
-        <S.Positioner>
-            <S.ThumNail />
-            <S.Footer>
-                <People/>
-                <span>Title</span>
-                <div className="view">
-                    <Views />
-                    <span>20</span>
-                </div>
-            </S.Footer>
-        </S.Positioner>
-    )
+import React from "react";
+import { ProjectType } from "utils/GlobalTypes";
+import * as S from "./Style";
+
+interface BoardItemProps {
+  list: ProjectType;
 }
+
+const BoardItem: React.FC<BoardItemProps> = ({ list }) => {
+  return (
+    <S.Positioner onClick={() => alert(list.title + " Clicked!")}>
+      <S.ThumNail />
+      <S.Footer>
+        <People style={{ marginLeft: 20 }} />
+        <span>{list.title}</span>
+        <div className="view">
+          <Views />
+          <span style={{ marginRight: 20 }}>{list.views}</span>
+        </div>
+      </S.Footer>
+    </S.Positioner>
+  );
+};
 
 export default BoardItem;
