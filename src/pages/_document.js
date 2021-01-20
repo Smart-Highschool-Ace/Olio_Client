@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 // Import styled components ServerStyleSheet
 import { ServerStyleSheet } from "styled-components";
 
@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
     const sheet = new ServerStyleSheet();
 
     // Step 2: Retrieve styles from components in the page
-    const page = renderPage(App => props =>
+    const page = renderPage((App) => (props) =>
       sheet.collectStyles(<App {...props} />)
     );
 
@@ -21,18 +21,22 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <Html>
         <Head>
           <head>
-            <title>Title</title>
+            <title>Olio</title>
           </head>
           <link
             href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+KR|Pacifico&display=swap"
             rel="stylesheet"
           />
           <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+            rel="stylesheet"
           />
           {this.props.styleTags}
         </Head>
@@ -40,7 +44,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
